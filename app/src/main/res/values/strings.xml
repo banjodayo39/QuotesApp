@@ -11,6 +11,16 @@
     <string name="congratulation">Congratulation</string>
     <string name="love">Love</string>
     <string name="poem">Poem</string>
-    <string name="quote_example">I\'m selfish,
-        impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can\'t handle me at my worst, then you sure as hell don't deserve me at my best</string>
+    <string name="quote_example">Give me my Romeo; and, when I shall die,
+Take him and cut him out in little stars,
+And he will make the face of heaven so fine
+That all the world will be in love with night,
+And pay no worship to the garish sun</string>
+    <string name="event">Event</string>
+    <string name="paste">Paste</string>
+    <string name="save">Save</string>
+    <string name="status">Status</string>
+    <string name="clear_all">Clear All</string>
+    <string name="mood">Mood</string>
+    <string name="funny">Funny</string>
 </resources>

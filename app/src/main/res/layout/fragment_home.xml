@@ -8,7 +8,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/backgnd_quotes"
         android:orientation="vertical">
 
         <LinearLayout
@@ -44,7 +43,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="8dp"
-                        app:srcCompat="@drawable/ic_cake_green_24dp" />
+                        app:srcCompat="@drawable/ic_motivational_green_24dp" />
 
                     <TextView
                         android:id="@+id/motivational_tv"
@@ -81,7 +80,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="8dp"
-                        app:srcCompat="@drawable/ic_cake_green_24dp" />
+                        app:srcCompat="@drawable/ic_success_green_24dp" />
 
                     <TextView
                         android:id="@+id/inspiration_tv"
@@ -131,7 +130,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="8dp"
-                        app:srcCompat="@drawable/ic_cake_green_24dp" />
+                        app:srcCompat="@drawable/ic_poem_green_24dp" />
 
                     <TextView
                         android:id="@+id/poem_tv"
@@ -169,7 +168,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="8dp"
-                        app:srcCompat="@drawable/ic_cake_green_24dp" />
+                        app:srcCompat="@drawable/ic_love_green_24dp" />
 
                     <TextView
                         android:id="@+id/love_tv"
@@ -219,7 +218,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="8dp"
-                        app:srcCompat="@drawable/ic_cake_green_24dp" />
+                        app:srcCompat="@drawable/ic_congratulation_green_24dp" />
 
                     <TextView
                         android:id="@+id/congratulation_tv"
@@ -257,7 +256,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="8dp"
-                        app:srcCompat="@drawable/ic_cake_green_24dp" />
+                        app:srcCompat="@drawable/ic_friendship_green_24dp" />
 
                     <TextView
                         android:id="@+id/friendship_tv"

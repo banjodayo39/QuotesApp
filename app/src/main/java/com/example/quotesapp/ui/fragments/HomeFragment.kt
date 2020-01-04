@@ -1,21 +1,19 @@
-package com.example.quotesapp.fragments
+package com.example.quotesapp.ui.fragments
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import com.example.quotesapp.R
+import com.example.quotesapp.databinding.FragmentHomeBinding
 
-class QuoteListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class HomeFragment : Fragment() {
+
     private var listener: OnFragmentInteractionListener? = null
-
+    private lateinit var binding : FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -27,9 +25,8 @@ class QuoteListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return TextView(activity).apply {
-            setText(R.string.hello_blank_fragment)
-        }
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        return binding.root
     }
 
 
@@ -38,7 +35,7 @@ class QuoteListFragment : Fragment() {
         if (context is OnFragmentInteractionListener) {
             listener = context
         } else {
-            throw RuntimeException(" must implement OnFragmentInteractionListener")
+            throw RuntimeException( " must implement OnFragmentInteractionListener")
         }
     }
 
@@ -49,15 +46,15 @@ class QuoteListFragment : Fragment() {
 
 
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
+
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            QuoteListFragment().apply {
+        fun newInstance() =
+            HomeFragment().apply {
                 arguments = Bundle().apply {
+
                 }
             }
     }

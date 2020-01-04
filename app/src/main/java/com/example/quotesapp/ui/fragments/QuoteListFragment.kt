@@ -1,19 +1,19 @@
-package com.example.quotesapp.fragments
+package com.example.quotesapp.ui.fragments
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.example.quotesapp.R
+import com.example.quotesapp.databinding.FragmentQuoteListBinding
 
-
-
-class AddQuoteFragment : Fragment() {
+class QuoteListFragment : Fragment() {
 
     private var listener: OnFragmentInteractionListener? = null
+    private lateinit var binding: FragmentQuoteListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,9 +25,13 @@ class AddQuoteFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_quote, container, false)
+    ):  View? {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_quote_list, container, false)
+        return binding.root
+    }
+
+    private fun initViews(){
+
     }
 
 
@@ -36,7 +40,7 @@ class AddQuoteFragment : Fragment() {
         if (context is OnFragmentInteractionListener) {
             listener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+            throw RuntimeException(" must implement OnFragmentInteractionListener")
         }
     }
 
@@ -52,10 +56,9 @@ class AddQuoteFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AddQuoteFragment().apply {
+        fun newInstance() =
+            QuoteListFragment().apply {
                 arguments = Bundle().apply {
-
                 }
             }
     }

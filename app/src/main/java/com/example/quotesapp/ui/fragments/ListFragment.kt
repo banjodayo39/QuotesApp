@@ -1,22 +1,39 @@
-package com.example.quotesapp.fragments
+package com.example.quotesapp.ui.fragments
+
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.example.quotesapp.R
+import com.example.quotesapp.databinding.FragmentQuoteListBinding
 
 
-class StatusFragment : Fragment() {
+class ListFragment : Fragment() {
+
     private var listener: OnFragmentInteractionListener? = null
+    private lateinit var binding: FragmentQuoteListBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-       return null
+    ):  View? {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_quote_list, container, false)
+        return binding.root
+    }
+
+    private fun initViews(){
+
     }
 
 
@@ -34,8 +51,6 @@ class StatusFragment : Fragment() {
         listener = null
     }
 
-
     interface OnFragmentInteractionListener {
     }
-
 }

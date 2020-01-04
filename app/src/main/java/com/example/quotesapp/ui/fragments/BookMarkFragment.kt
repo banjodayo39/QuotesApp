@@ -1,4 +1,4 @@
-package com.example.quotesapp.fragments
+package com.example.quotesapp.ui.fragments
 
 
 import android.os.Bundle
@@ -6,12 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.example.quotesapp.R
+import com.example.quotesapp.databinding.FragmentQuoteListBinding
 
 class BookMarkFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var binding: FragmentQuoteListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,15 +23,14 @@ class BookMarkFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_book_mark, container, false)
+    ):  View? {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_quote_list, container, false)
+        return binding.root
     }
-
 
     companion object {
        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             BookMarkFragment().apply {
                 arguments = Bundle().apply {
 
