@@ -59,25 +59,25 @@ class MainActivity : AppCompatActivity(),
         binding.bottomNav.add(
             MeowBottomNavigation.Model(
                 1,
-                com.example.quotesapp.R.drawable.ic_quote_green_24dp
+                com.example.quotesapp.R.drawable.ic_quote_blue_24dp
             )
         )
         binding.bottomNav.add(
             MeowBottomNavigation.Model(
                 2,
-                com.example.quotesapp.R.drawable.ic_status_green_24dp
+                com.example.quotesapp.R.drawable.ic_status_blue_24dp
             )
         )
         binding.bottomNav.add(
             MeowBottomNavigation.Model(
                 3,
-                com.example.quotesapp.R.drawable.ic_add_quote_green_24dp
+                com.example.quotesapp.R.drawable.ic_add_quote_blue_24dp
             )
         )
         binding.bottomNav.add(
             MeowBottomNavigation.Model(
                 4,
-                com.example.quotesapp.R.drawable.ic_bookmark_green_24dp
+                com.example.quotesapp.R.drawable.ic_bookmark_blue_24dp
             )
         )
 
@@ -119,22 +119,22 @@ class MainActivity : AppCompatActivity(),
 
     private fun loadContainer(imageView: ImageView) {
         when (imageView.id) {
-            com.example.quotesapp.R.drawable.ic_quote_green_24dp -> {
+            com.example.quotesapp.R.drawable.ic_quote_blue_24dp -> {
                 showHomeFragment()
                 true
             }
 
-            com.example.quotesapp.R.drawable.ic_status_green_24dp -> {
+            com.example.quotesapp.R.drawable.ic_status_blue_24dp -> {
                 showStatusFragment()
                 true
             }
 
-            com.example.quotesapp.R.drawable.ic_add_quote_green_24dp -> {
+            com.example.quotesapp.R.drawable.ic_add_quote_blue_24dp -> {
                 showAddQuoteFragment()
                 true
             }
 
-            com.example.quotesapp.R.drawable.ic_bookmark_green_24dp -> {
+            com.example.quotesapp.R.drawable.ic_bookmark_blue_24dp -> {
                 showBookMarkFragment()
                 true
             }

@@ -39,21 +39,21 @@ class StatusFragment : Fragment() {
     }
 
     private fun eventSection(){
-        binding.motivationalIcon.setImageResource(R.drawable.ic_events_green_24dp)
+        binding.motivationalIcon.setImageResource(R.drawable.ic_events_blue_24dp)
         binding.motivationalTv.text = getString(R.string.event)
     }
 
     private fun birthdaySection(){
-        binding.successIcon.setImageResource(R.drawable.ic_birthday_green_24dp)
+        binding.successIcon.setImageResource(R.drawable.ic_birthday_blue_24dp)
     }
 
     private fun moodSection(){
-        binding.poemIcon.setImageResource(R.drawable.ic_mood_green_24dp)
+        binding.poemIcon.setImageResource(R.drawable.ic_mood_blue_24dp)
         binding.poemTv.text = getString(R.string.mood)
     }
 
     private fun funnySection(){
-        binding.loveIcon.setImageResource(R.drawable.ic_funny_green_24dp)
+        binding.loveIcon.setImageResource(R.drawable.ic_funny_blue_24dp)
         binding.loveTv.text = getString(R.string.funny)
     }
 
