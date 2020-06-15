@@ -11,7 +11,7 @@ import com.example.quotesapp.R
 import com.example.quotesapp.databinding.FragmentNoteBinding
 
 
-class AddQuoteFragment : Fragment() {
+class ComposeQuoteFragment : Fragment() {
 
     private var listener: OnFragmentInteractionListener? = null
     private lateinit var binding: FragmentNoteBinding
@@ -28,6 +28,7 @@ class AddQuoteFragment : Fragment() {
         savedInstanceState: Bundle?
     ):  View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
+
         return binding.root
     }
 
@@ -58,7 +59,7 @@ class AddQuoteFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() =
-            AddQuoteFragment().apply {
+            ComposeQuoteFragment().apply {
                 arguments = Bundle().apply {
 
                 }

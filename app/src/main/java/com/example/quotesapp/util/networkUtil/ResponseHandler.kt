@@ -1,7 +1,6 @@
 package com.example.quotesapp.util.networkUtil
 
 import com.example.quotesapp.model.ApiError
-import com.example.quotesapp.model.Resource
 import com.example.quotesapp.util.SERVER_ERROR
 import com.google.gson.Gson
 import retrofit2.HttpException

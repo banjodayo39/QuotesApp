@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.example.quotesapp.R
 import com.example.quotesapp.databinding.FragmentQuoteListBinding
+import kotlinx.android.synthetic.main.layout_searchbar.view.*
 
 class QuoteListFragment : Fragment() {
 
@@ -27,6 +29,9 @@ class QuoteListFragment : Fragment() {
         savedInstanceState: Bundle?
     ):  View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_quote_list, container, false)
+        binding.layoutSearchBar.back.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_quoteListFragment_to_homeFragment)
+        }
         return binding.root
     }
 

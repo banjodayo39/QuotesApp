@@ -11,7 +11,7 @@ import org.koin.dsl.module
 
 val databaseModule = module {
     single { provideApplicationDatabase(androidApplication()) }
-    //single { provideBattleDao(get())}
+    single { get<AppDatabase>().quoteDao() }
 }
 
 fun provideApplicationDatabase(context: Application): AppDatabase {
@@ -20,5 +20,4 @@ fun provideApplicationDatabase(context: Application): AppDatabase {
         .build()
 }
 
-//fun provideBattleDao(database: AppDatabase):QuoteDAO = database.quoteDAO
 

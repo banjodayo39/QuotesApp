@@ -1,4 +1,4 @@
-package com.example.quotesapp.activity
+package com.example.quotesapp.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,14 +17,14 @@ import kotlin.Unit
 
 class MainActivity : AppCompatActivity(),
     HomeFragment.OnFragmentInteractionListener,
-    AddQuoteFragment.OnFragmentInteractionListener,
-    StatusFragment.OnFragmentInteractionListener,
+    ComposeQuoteFragment.OnFragmentInteractionListener,
+    GenerateQuoteFragment.OnFragmentInteractionListener,
     QuoteListFragment.OnFragmentInteractionListener{
 
     private lateinit var homeFragment: HomeFragment
-    private lateinit var addQuoteFragment: AddQuoteFragment
+    private lateinit var composeQuoteFragment: ComposeQuoteFragment
     private lateinit var bookMarkFragment: BookMarkFragment
-    private lateinit var statusFragment: StatusFragment
+    private lateinit var generateQuoteFragment: GenerateQuoteFragment
     private lateinit var quoteListFragment: QuoteListFragment
 
     private val binding by lazy {
@@ -152,8 +152,8 @@ class MainActivity : AppCompatActivity(),
 
     private fun showAddQuoteFragment() {
         binding.fragmentContainer.apply {
-            addQuoteFragment = AddQuoteFragment.newInstance()
-            loadFragment(addQuoteFragment)
+            composeQuoteFragment = ComposeQuoteFragment.newInstance()
+            loadFragment(composeQuoteFragment)
         }
     }
 
@@ -166,8 +166,8 @@ class MainActivity : AppCompatActivity(),
 
     private fun showStatusFragment() {
         binding.fragmentContainer.apply {
-            statusFragment = StatusFragment()
-            loadFragment(statusFragment)
+            generateQuoteFragment = GenerateQuoteFragment()
+            loadFragment(generateQuoteFragment)
         }
     }
 

@@ -1,5 +1,12 @@
 package com.example.quotesapp.util
 
+import java.util.concurrent.Executors
+
+private val SINGLE_EXECUTOR = Executors.newSingleThreadExecutor()
+
+fun executeThread(f: () -> Unit) {
+    SINGLE_EXECUTOR.execute(f)
+}
 
 val LOG_TAG = "com.quote.log"
 val RETROFIT_BASE_URL = "http://gateway.marvel.com"

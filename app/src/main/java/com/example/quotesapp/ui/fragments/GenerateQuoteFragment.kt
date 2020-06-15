@@ -11,7 +11,7 @@ import com.example.quotesapp.R
 import com.example.quotesapp.databinding.FragmentHomeBinding
 
 
-class StatusFragment : Fragment() {
+class GenerateQuoteFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private var listener: OnFragmentInteractionListener? = null
@@ -20,7 +20,7 @@ class StatusFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ):  View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
         return binding.root
     }
 
@@ -34,27 +34,21 @@ class StatusFragment : Fragment() {
         eventSection()
         birthdaySection()
 
-        binding.congratulationCardView.visibility = View.INVISIBLE
-        binding.friendshipCardView.visibility = View.INVISIBLE
     }
 
     private fun eventSection(){
-        binding.motivationalIcon.setImageResource(R.drawable.ic_events_blue_24dp)
-        binding.motivationalTv.text = getString(R.string.event)
+
     }
 
     private fun birthdaySection(){
-        binding.successIcon.setImageResource(R.drawable.ic_birthday_blue_24dp)
     }
 
     private fun moodSection(){
-        binding.poemIcon.setImageResource(R.drawable.ic_mood_blue_24dp)
-        binding.poemTv.text = getString(R.string.mood)
+
     }
 
     private fun funnySection(){
-        binding.loveIcon.setImageResource(R.drawable.ic_funny_blue_24dp)
-        binding.loveTv.text = getString(R.string.funny)
+
     }
 
     override fun onAttach(context: Context) {

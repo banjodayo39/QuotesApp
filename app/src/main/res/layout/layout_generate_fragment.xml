@@ -12,13 +12,13 @@
 
         <include
             android:id="@+id/layout_search_bar"
-            layout="@layout/layout_searchbar"/>
+            layout="@layout/layout_toolbar_home"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_of_quote_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
             tools:listitem="@layout/quote_list_item" />
 
     </LinearLayout>
